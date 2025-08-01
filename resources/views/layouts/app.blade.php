@@ -1,306 +1,369 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tag -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="copyright" content="pavilan" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Title -->
     <title>Primary Care</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            padding-top: 140px;
-        }
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.png" />
 
-        .quick-link-item {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 0.5rem;
-            cursor: pointer;
-            transition: transform 0.3s ease, color 0.3s ease;
-            color: #0dcaf0;
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
+        rel="stylesheet" />
 
-        }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- icofont CSS -->
+    <link rel="stylesheet" href="css/icofont.css" />
+    <!-- Slicknav -->
+    <link rel="stylesheet" href="css/slicknav.min.css" />
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="css/owl-carousel.css" />
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="css/datepicker.css" />
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
 
-        .quick-link-item i,
-        .quick-link-item small {
-            transition: color 0.3s ease;
-        }
+    <!-- Mediplus CSS -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
-        .quick-link-item:hover {
-            transform: scale(1.1);
-            color: #0d6efd;
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="css/color/color1.css" />
 
-        }
-
-
-
-
-        .quick-link-item:hover i,
-        .quick-link-item:hover small {
-            color: #0d6efd;
-        }
-
-        .nav-link {
-            position: relative;
-            color: #000;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-        }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: #4a90e2;
-        }
-
-        .nav-link::after {
-            content: '';
-            display: block;
-            width: 0%;
-            height: 2px;
-            background: #4a90e2;
-            transition: 0.3s;
-            position: absolute;
-            bottom: 0;
-            left: 10%;
-        }
-
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 80%;
-        }
-
-        .hero {
-            background: linear-gradient(to right, #d9c9e9, #4a90e2);
-            color: #000;
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .section-title {
-            color: #000;
-            border-bottom: 2px solid #c0c0c0;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        #mobileMenuOverlay {
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            transform: translateY(-100%);
-            opacity: 0;
-        }
-
-        #mobileMenuOverlay.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    </style>
+    <link rel="stylesheet" id="colors" />
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
 
-    <div class="fixed-top" style="z-index: 1030;">
-        <!-- Top Quick Links -->
-        <div class="bg-white py-3 border-bottom">
-            <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-                <!-- Logo -->
-                <div class="d-flex align-items-center mb-3 mb-md-0">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" height="45" class="me-2" />
-                    <span class="fs-4 fw-bold text-primary">PrimaryCare</span>
-                </div>
-
-                <!-- Quick Links (hide on mobile) -->
-                <div class="d-none d-md-flex flex-wrap justify-content-end gap-4 text-center quick-links">
-                    <div class="quick-link-item">
-                        <i class="bi bi-person-lines-fill text-info fs-4 d-block"></i>
-                        <small>Find a Doctor</small>
-                    </div>
-                    <div class="quick-link-item">
-                        <i class="bi bi-display text-info fs-4 d-block"></i>
-                        <small>24/7 Virtual Care</small>
-                    </div>
-                    <div class="quick-link-item">
-                        <i class="bi bi-credit-card text-info fs-4 d-block"></i>
-                        <small>Pay Your Bill</small>
-                    </div>
-                    <div class="quick-link-item">
-                        <i class="bi bi-hospital text-info fs-4 d-block"></i>
-                        <small>Patient Portal</small>
-                    </div>
-                </div>
+            <div class="indicator">
+                <svg width="16px" height="12px">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
             </div>
         </div>
+    </div>
+    <!-- End Preloader -->
 
-        <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-lg navbar-light"
-            style="background-color: #f5f9fb; border-top: 1px solid #c0c0c0;">
+
+
+    <!-- Header Area -->
+    <header class="header">
+        <!-- Topbar -->
+        <div class="topbar">
             <div class="container">
-                <button class="navbar-toggler" type="button" onclick="openMobileMenu()">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="row">
+                    <div class="col-lg-6 col-md-5 col-12">
+                        <!-- Contact -->
+                        <ul class="top-link">
+                            <li><a href=""><i class="fa fa-phone me-2 text-primary"></i>Find a Doctor</a></li>
+                            <li><a href=""><i class="fa fa-user-md me-2 text-primary"></i>24/7 Virtual Care</a>
+                            </li>
+                            <li><a href=""><i class="fa fa-credit-card me-2 text-primary"></i>Pay Your Bill</a>
+                            </li>
+                            <li><a href=""><i class="fa fa-hospital-o me-2 text-primary"></i>Patient Portal</a>
+                            </li>
+                        </ul>
 
-                <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-                    <ul class="navbar-nav gap-4">
-                        <li class="nav-item">
-                            <a class="nav-link @if (request()->routeIs('home')) active @endif"
-                                href="{{ route('home') }}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link @if (request()->routeIs('services')) active @endif"
-                                href="{{ route('services') }}">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link @if (request()->routeIs('about')) active @endif"
-                                href="{{ route('about') }}">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link @if (request()->routeIs('contact')) active @endif"
-                                href="{{ route('contact') }}">Contact</a>
-                        </li>
-                    </ul>
+
+                        <!-- End Contact -->
+                    </div>
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <!-- Top Contact -->
+                        <ul class="top-contact">
+                            <li><i class="fa fa-phone"></i>+880 1234 56789</li>
+                            <li>
+                                <i class="fa fa-envelope"></i><a
+                                    href="mailto:support@yourmail.com">support@yourmail.com</a>
+                            </li>
+                        </ul>
+                        <!-- End Top Contact -->
+                    </div>
                 </div>
             </div>
-        </nav>
-    </div>
-    <div id="mobileMenuOverlay" class="d-lg-none position-fixed top-0 start-0 w-100 h-100 bg-light overflow-auto"
-        style="z-index: 1040; display: none;">
-        <div class="p-4">
-            <!-- Logo & Close -->
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo" height="40">
-                <button onclick="closeMobileMenu()" class="btn btn-outline-secondary rounded-circle">
-                    &times;
-                </button>
-            </div>
+        </div>
+        <!-- End Topbar -->
+        <!-- Header Inner -->
+        <div class="header-inner">
+            <div class="container">
+                <div class="inner">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <!-- Start Logo -->
+                            <div class="logo">
+                                <a href="{{ route('home') }}"><img style="width: 60px" src="img/favicon.png"
+                                        alt="Primary Care" /></a>
+                            </div>
+                            <!-- End Logo -->
+                            <!-- Mobile Nav -->
+                            <div class="mobile-nav"></div>
+                            <!-- End Mobile Nav -->
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-12">
+                            <!-- Main Menu -->
+                            <div class="main-menu">
+                                <nav class="navigation">
+                                    <ul class="nav menu">
+                                        <li class="active">
+                                            <a href="{{ route('home') }}">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('services') }}">Services <i
+                                                    class="icofont-rounded-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li>
+                                                    <a href="#"><i class="fa fa-caret-right"
+                                                            aria-hidden="true"></i>Consuling</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-caret-right"
+                                                            aria-hidden="true"></i>Finance</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-caret-right"
+                                                            aria-hidden="true"></i>Testimonials</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-caret-right"
+                                                            aria-hidden="true"></i>FAQ</a>
+                                                </li>
+                                            </ul>
+                                        </li>
 
-            <!-- Page Links -->
-            <div class="d-grid gap-3 mb-4">
-                <a href="{{ route('about') }}" class="btn btn-white border shadow-sm text-start">About Us</a>
-                <a href="{{ route('contact') }}" class="btn btn-white border shadow-sm text-start">Contact</a>
-                <a href="#" class="btn btn-white border shadow-sm text-start">Medicare</a>
-                <a href="#" class="btn btn-white border shadow-sm text-start">Patient Forms</a>
-            </div>
-
-            <!-- Quick Action Links -->
-            <div class="d-grid gap-3">
-                <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
-                    <i class="bi bi-person-lines-fill me-2 fs-4 text-info"></i> Find a Doctor
-                </a>
-                <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
-                    <i class="bi bi-display me-2 fs-4 text-info"></i> 24/7 Virtual Care
-                </a>
-                <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
-                    <i class="bi bi-credit-card me-2 fs-4 text-info"></i> Pay Your Bill
-                </a>
-                <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
-                    <i class="bi bi-hospital me-2 fs-4 text-info"></i> Patient Portal
-                </a>
+                                        <li>
+                                            <a href="{{ route('about') }}">About Us</a>
+                                        </li>
+                                        <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                                        {{-- <li>
+                                            <a href="#">Pages <i class="icofont-rounded-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a href="register.html">Sign Up</a></li>
+                                                <li><a href="login.html">Login</a></li>
+                                                <li><a href="faq.html">Faq</a></li>
+                                            </ul>
+                                        </li> --}}
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!--/ End Main Menu -->
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <div class="get-quote">
+                                <a href="" class="btn"> Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+        <!--/ End Header Inner -->
+    </header>
+    <!-- End Header Area -->
 
-    <!-- Main Content -->
-    <main class="py-4">
+    <main class="">
         @yield('content')
     </main>
 
-    <!-- Footer -->
 
-    <footer class="bg-white pt-5 border-top" style="border-color: #c0c0c0;">
-        <div class="container pb-4">
-            <div class="row text-center text-md-start">
-                <!-- Left Column -->
-                <div class="col-md-3 mb-4">
-                    <div class="mb-3 d-flex align-items-center">
-                        <i class="bi bi-person-lines-fill text-info fs-4 me-2"></i>
-                        <span>Find a Doctor</span>
+    <!-- Footer Area -->
+    <footer id="footer" class="footer">
+        <!-- Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="single-footer">
+                            <h2>About Us</h2>
+                            <p>
+                                Lorem ipsum dolor sit am consectetur adipisicing elit do
+                                eiusmod tempor incididunt ut labore dolore magna.
+                            </p>
+                            <!-- Social -->
+                            <ul class="social">
+                                <li>
+                                    <a href="#"><i class="icofont-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="icofont-google-plus"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="icofont-twitter"></i></a>
+                                </li>
+
+                            </ul>
+                            <!-- End Social -->
+                        </div>
                     </div>
-                    <div class="mb-3 d-flex align-items-center">
-                        <i class="bi bi-display text-info fs-4 me-2"></i>
-                        <span>24/7 Virtual Care</span>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="single-footer f-link">
+                            <h2>Quick Links</h2>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our
+                                                Cases</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>Consuling</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>Finance</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>Testimonials</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>FAQ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3 d-flex align-items-center">
-                        <i class="bi bi-credit-card text-info fs-4 me-2"></i>
-                        <span>Pay Your Bill</span>
-                    </div>
-                    <div class="mb-3 d-flex align-items-center">
-                        <i class="bi bi-hospital text-info fs-4 me-2"></i>
-                        <span>Patient Portal</span>
+                    {{-- <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-footer">
+                            <h2>Open Hours</h2>
+                            <p>
+                                Lorem ipsum dolor sit ame consectetur adipisicing elit do
+                                eiusmod tempor incididunt.
+                            </p>
+                            <ul class="time-sidual">
+                                <li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
+                                <li class="day">Saturday <span>9.00-18.30</span></li>
+                                <li class="day">Monday - Thusday <span>9.00-15.00</span></li>
+                            </ul>
+                        </div>
+                    </div> --}}
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="single-footer">
+                            <h2>Newsletter</h2>
+                            <p>
+                                subscribe to our newsletter to get allour news in your inbox..
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            </p>
+                            <form action="https://mediplus-html.vercel.app/mail/mail.php" method="get"
+                                class="newsletter-inner">
+                                <input name="email" placeholder="Email Address" class="common-input"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'"
+                                    required="" type="email" />
+                                <button class="button">
+                                    <i class="icofont icofont-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Center Column -->
-                <div class="col-md-3 mb-4 text-center text-md-start">
-                    <img src="{{ asset('images/logo.png') }}" alt="PrimaryCare Logo" height="40" class="mb-2">
-                    <h6 class="text-primary fw-semibold">Connect with Us</h6>
-                    <div class="d-flex justify-content-center justify-content-md-start gap-3">
-                        <i class="bi bi-facebook fs-5"></i>
-                        <i class="bi bi-instagram fs-5"></i>
-                        <i class="bi bi-twitter-x fs-5"></i>
-                        <i class="bi bi-linkedin fs-5"></i>
-                    </div>
-                </div>
-
-                <!-- Right Column -->
-                <div class="col-md-3 mb-4 text-center text-md-start">
-                    <h6 class="fw-semibold text-primary">Download the App</h6>
-                    <ul class="list-unstyled small">
-                        <li>• Make appointments</li>
-                        <li>• Message your provider</li>
-                        <li>• Manage Medications</li>
-                        <li>• Get care on the go</li>
-                    </ul>
-                    <div class="d-flex gap-2 mb-3">
-                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                            alt="App Store" height="32">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                            alt="Google Play" height="32">
-                    </div>
-                </div>
-
-                <div class="col-md-3 text-center text-md-start d-flex  justify-content-md-center">
-                    <div>
-                        <a href="#" class="btn btn-warning fw-bold rounded-pill px-4 mb-3">Patient Login</a>
-                        <a href="#" class="btn btn-outline-info fw-bold rounded-pill px-4">For Physicians</a>
-                    </div>
-                </div>
-            </div>
-
-            <hr style="border-color: #c0c0c0;">
-
-            <!-- Bottom Bar -->
-            <div class="text-center small text-muted py-2">
-                © {{ date('Y') }} PrimaryCare
-                <span class="mx-2">|</span>
-                <a href="#" class="text-muted text-decoration-none">Privacy Policy</a>
-                <span class="mx-2">|</span>
-                <a href="#" class="text-muted text-decoration-none">Sitemap</a>
-                <span class="mx-2">|</span>
-                <a href="#" class="text-muted text-decoration-none">HIPAA Notice</a>
             </div>
         </div>
+        <!--/ End Footer Top -->
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <div class="copyright-content">
+                            <p>
+                                © Copyright 2024 | All Rights Reserved by
+                                <a href="#">Mediplus</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Copyright -->
     </footer>
+    <!--/ End Footer Area -->
 
-    <script>
-        function openMobileMenu() {
-            const menu = document.getElementById('mobileMenuOverlay');
-            menu.style.display = 'block';
-            setTimeout(() => menu.classList.add('show'), 10);
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeMobileMenu() {
-            const menu = document.getElementById('mobileMenuOverlay');
-            menu.classList.remove('show');
-            document.body.style.overflow = '';
-            setTimeout(() => menu.style.display = 'none', 300);
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!-- jquery Min JS -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jquery Migrate JS -->
+    <script src="js/jquery-migrate.js"></script>
+    <!-- Easing JS -->
+    <script src="js/easing.js"></script>
+    <!-- Color JS -->
+    <script src="js/colors.js"></script>
+    <!-- Popper JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Datepicker JS -->
+    <script src="js/bootstrap-datepicker.js"></script>
+    <!-- Jquery Nav JS -->
+    <script src="js/jquery.nav.js"></script>
+    <!-- Slicknav JS -->
+    <script src="js/slicknav.min.js"></script>
+    <!-- ScrollUp JS -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- Niceselect JS -->
+    <script src="js/niceselect.js"></script>
+    <!-- Tilt Jquery JS -->
+    <script src="js/tilt.jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="js/owl-carousel.js"></script>
+    <!-- counterup JS -->
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <!-- Steller JS -->
+    <script src="js/steller.js"></script>
+    <!-- Wow JS -->
+    <script src="js/wow.min.js"></script>
+    <!-- Magnific Popup JS -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
 </body>
+
+<!-- Mirrored from mediplus-html.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2025 17:35:55 GMT -->
 
 </html>
