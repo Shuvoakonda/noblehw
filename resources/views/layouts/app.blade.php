@@ -77,8 +77,8 @@
         <!-- Topbar -->
         <div class="topbar">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-5 col-12">
+                <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <div>
                         <!-- Contact -->
                         <ul class="top-link">
                             <li><a href=""><i class="fa fa-phone me-2 text-primary"></i>Find a Doctor</a></li>
@@ -93,13 +93,12 @@
 
                         <!-- End Contact -->
                     </div>
-                    <div class="col-lg-6 col-md-7 col-12">
+                    <div>
                         <!-- Top Contact -->
-                        <ul class="top-contact">
-                            <li><i class="fa fa-phone"></i>+880 1234 56789</li>
-                            <li>
-                                <i class="fa fa-envelope"></i><a
-                                    href="mailto:support@yourmail.com">support@yourmail.com</a>
+                        <ul class="top-link">
+                            <li> <a href="tel:+880123456789"><i class="fa fa-phone text-primary"></i> &nbsp;+880 1234 56789</a></li>
+                            <li> <a href="mailto:support@yourmail.com"><i class="fa fa-envelope text-primary"></i>
+                                    &nbsp;support@yourmail.com</a>
                             </li>
                         </ul>
                         <!-- End Top Contact -->
