@@ -77,7 +77,7 @@
         <!-- Topbar -->
         <div class="topbar">
             <div class="container">
-                <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-4">
                     <div>
                         <!-- Contact -->
                         <ul class="top-link">
@@ -96,7 +96,8 @@
                     <div>
                         <!-- Top Contact -->
                         <ul class="top-link">
-                            <li> <a href="tel:+880123456789"><i class="fa fa-phone text-primary"></i> &nbsp;+880 1234 56789</a></li>
+                            <li> <a href="tel:+880123456789"><i class="fa fa-phone text-primary"></i> &nbsp;+880 1234
+                                    56789</a></li>
                             <li> <a href="mailto:support@yourmail.com"><i class="fa fa-envelope text-primary"></i>
                                     &nbsp;support@yourmail.com</a>
                             </li>
@@ -269,7 +270,7 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="col-lg-3 col-md-6 col-12">
+                    <div class="col-lg-4 col-md-6 col-12">
                         <div class="single-footer">
                             <h2>Open Hours</h2>
                             <p>
@@ -282,25 +283,8 @@
                                 <li class="day">Monday - Thusday <span>9.00-15.00</span></li>
                             </ul>
                         </div>
-                    </div> --}}
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-footer">
-                            <h2>Newsletter</h2>
-                            <p>
-                                subscribe to our newsletter to get allour news in your inbox..
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            </p>
-                            <form action="https://mediplus-html.vercel.app/mail/mail.php" method="get"
-                                class="newsletter-inner">
-                                <input name="email" placeholder="Email Address" class="common-input"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'"
-                                    required="" type="email" />
-                                <button class="button">
-                                    <i class="icofont icofont-paper-plane"></i>
-                                </button>
-                            </form>
-                        </div>
                     </div>
+                 
                 </div>
             </div>
         </div>
@@ -313,7 +297,7 @@
                         <div class="copyright-content">
                             <p>
                                 © Copyright 2024 | All Rights Reserved by
-                                <a href="#">Mediplus</a>
+                                <a href="#">Primary Care</a>
                             </p>
                         </div>
                     </div>
@@ -363,6 +347,5 @@
     <script src="js/main.js"></script>
 </body>
 
-<!-- Mirrored from mediplus-html.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2025 17:35:55 GMT -->
 
 </html>
