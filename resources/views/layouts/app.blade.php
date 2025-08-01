@@ -86,6 +86,17 @@
             display: inline-block;
             margin-bottom: 20px;
         }
+
+        #mobileMenuOverlay {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        #mobileMenuOverlay.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -101,8 +112,8 @@
                     <span class="fs-4 fw-bold text-primary">PrimaryCare</span>
                 </div>
 
-                <!-- Quick Links -->
-                <div class="d-flex flex-wrap justify-content-end gap-4 text-center quick-links">
+                <!-- Quick Links (hide on mobile) -->
+                <div class="d-none d-md-flex flex-wrap justify-content-end gap-4 text-center quick-links">
                     <div class="quick-link-item">
                         <i class="bi bi-person-lines-fill text-info fs-4 d-block"></i>
                         <small>Find a Doctor</small>
@@ -127,7 +138,7 @@
         <nav class="navbar navbar-expand-lg navbar-light"
             style="background-color: #f5f9fb; border-top: 1px solid #c0c0c0;">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <button class="navbar-toggler" type="button" onclick="openMobileMenu()">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -154,7 +165,42 @@
             </div>
         </nav>
     </div>
+    <div id="mobileMenuOverlay" class="d-lg-none position-fixed top-0 start-0 w-100 h-100 bg-light overflow-auto"
+        style="z-index: 1040; display: none;">
+        <div class="p-4">
+            <!-- Logo & Close -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo" height="40">
+                <button onclick="closeMobileMenu()" class="btn btn-outline-secondary rounded-circle">
+                    &times;
+                </button>
+            </div>
 
+            <!-- Page Links -->
+            <div class="d-grid gap-3 mb-4">
+                <a href="{{ route('about') }}" class="btn btn-white border shadow-sm text-start">About Us</a>
+                <a href="{{ route('contact') }}" class="btn btn-white border shadow-sm text-start">Contact</a>
+                <a href="#" class="btn btn-white border shadow-sm text-start">Medicare</a>
+                <a href="#" class="btn btn-white border shadow-sm text-start">Patient Forms</a>
+            </div>
+
+            <!-- Quick Action Links -->
+            <div class="d-grid gap-3">
+                <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
+                    <i class="bi bi-person-lines-fill me-2 fs-4 text-info"></i> Find a Doctor
+                </a>
+                <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
+                    <i class="bi bi-display me-2 fs-4 text-info"></i> 24/7 Virtual Care
+                </a>
+                <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
+                    <i class="bi bi-credit-card me-2 fs-4 text-info"></i> Pay Your Bill
+                </a>
+                <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
+                    <i class="bi bi-hospital me-2 fs-4 text-info"></i> Patient Portal
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main class="py-4">
@@ -238,8 +284,23 @@
         </div>
     </footer>
 
+    <script>
+        function openMobileMenu() {
+            const menu = document.getElementById('mobileMenuOverlay');
+            menu.style.display = 'block';
+            setTimeout(() => menu.classList.add('show'), 10);
+            document.body.style.overflow = 'hidden';
+        }
 
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobileMenuOverlay');
+            menu.classList.remove('show');
+            document.body.style.overflow = '';
+            setTimeout(() => menu.style.display = 'none', 300);
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
