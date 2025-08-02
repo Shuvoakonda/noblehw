@@ -5,16 +5,16 @@
     <section class="slider">
         <div class="hero-slider">
             <!-- Start Single Slider -->
-            <div class="single-slider" style="background-image: url('img/slider2.jpg')">
+            <div class="single-slider" style="background-image: url('slider/d-samples-covid-test.jpg')">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="text">
-                                <h1>
+                                <h1 class="text-white">
                                     We Provide <span>Medical</span> Services That You Can
                                     <span>Trust!</span>
                                 </h1>
-                                <p>
+                                <pclass="text-white">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Mauris sed nisl pellentesque, faucibus libero eu, gravida
                                     quam.
@@ -30,16 +30,16 @@
             </div>
             <!-- End Single Slider -->
             <!-- Start Single Slider -->
-            <div class="single-slider" style="background-image: url('img/slider.jpg')">
+            <div class="single-slider" style="background-image: url('slider/ing-covid-test.jpg')">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="text">
-                                <h1>
+                                <h1 class="text-white">
                                     We Provide <span>Medical</span> Services That You Can
                                     <span>Trust!</span>
                                 </h1>
-                                <p>
+                                <p class="text-white">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Mauris sed nisl pellentesque, faucibus libero eu, gravida
                                     quam.
@@ -55,16 +55,16 @@
             </div>
             <!-- Start End Slider -->
             <!-- Start Single Slider -->
-            <div class="single-slider" style="background-image: url('img/slider3.jpg')">
+            <div class="single-slider" style="background-image: url('slider/covid-vaccine.jpg')">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="text">
-                                <h1>
+                                <h1 class="text-white">
                                     We Provide <span>Medical</span> Services That You Can
                                     <span>Trust!</span>
                                 </h1>
-                                <p>
+                                <p class="text-white">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Mauris sed nisl pellentesque, faucibus libero eu, gravida
                                     quam.

@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="css/color/color1.css" />
 
     <link rel="stylesheet" id="colors" />
+    
 </head>
 
 <body>
@@ -75,39 +76,33 @@
     <!-- Header Area -->
     <header class="header">
         <!-- Topbar -->
-        <div class="topbar">
-            <div class="container">
-                <div class="d-flex justify-content-between align-items-center flex-wrap gap-4">
-                    <div>
-                        <!-- Contact -->
-                        <ul class="top-link">
-                            <li><a href=""><i class="fa fa-phone me-2 text-primary"></i>Find a Doctor</a></li>
-                            <li><a href=""><i class="fa fa-user-md me-2 text-primary"></i>24/7 Virtual Care</a>
-                            </li>
-                            <li><a href=""><i class="fa fa-credit-card me-2 text-primary"></i>Pay Your Bill</a>
-                            </li>
-                            <li><a href=""><i class="fa fa-hospital-o me-2 text-primary"></i>Patient Portal</a>
-                            </li>
-                        </ul>
-
-
-                        <!-- End Contact -->
-                    </div>
-                    <div>
-                        <!-- Top Contact -->
-                        <ul class="top-link">
-                            <li> <a href="tel:+880123456789"><i class="fa fa-phone text-primary"></i> &nbsp;+880 1234
-                                    56789</a></li>
-                            <li> <a href="mailto:support@yourmail.com"><i class="fa fa-envelope text-primary"></i>
-                                    &nbsp;support@yourmail.com</a>
-                            </li>
-                        </ul>
-                        <!-- End Top Contact -->
-                    </div>
-                </div>
+        <div class="topbar d-none d-md-block d-lg-block">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-4">
+            <div>
+                <!-- Contact -->
+                <ul class="top-link">
+                    <li><a href=""><i class="fa fa-phone me-2 text-primary"></i>Find a Doctor</a></li>
+                    <li><a href=""><i class="fa fa-user-md me-2 text-primary"></i>24/7 Virtual Care</a></li>
+                    <li><a href=""><i class="fa fa-credit-card me-2 text-primary"></i>Pay Your Bill</a></li>
+                    <li><a href=""><i class="fa fa-hospital-o me-2 text-primary"></i>Patient Portal</a></li>
+                </ul>
+                <!-- End Contact -->
+            </div>
+            <div>
+                <!-- Top Contact -->
+                <ul class="top-link">
+                    <li><a href="tel:+880123456789"><i class="fa fa-phone text-primary"></i> &nbsp;+880 1234 56789</a></li>
+                    <li><a href="mailto:support@yourmail.com"><i class="fa fa-envelope text-primary"></i> &nbsp;support@yourmail.com</a></li>
+                </ul>
+                <!-- End Top Contact -->
             </div>
         </div>
+    </div>
+</div>
+
         <!-- End Topbar -->
+
         <!-- Header Inner -->
         <div class="header-inner">
             <div class="container">
@@ -158,7 +153,16 @@
                                         <li>
                                             <a href="{{ route('about') }}">About Us</a>
                                         </li>
-                                        <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                                       
+                                                <li class=" d-block d-md-none d-xl-none"><a href=""><i class="fa  fa-phone me-2 text-primary"></i>Find a Doctor</a></li>
+                                                <li class=" d-block d-md-none d-xl-none"><a href=""><i class="fa  fa-user-md me-2 text-primary"></i>24/7 Virtual Care</a></li>
+                                                <li class=" d-block d-md-none d-xl-none"><a href=""><i class="fa  fa-credit-card me-2 text-primary"></i>Pay Your Bill</a></li>
+                                                <li class=" d-block d-md-none d-xl-none"><a href=""><i class="fa  fa-hospital-o me-2 text-primary"></i>Patient Portal</a></li>
+                                                <li class=" d-block d-md-none d-xl-none"><a href="tel:+880123456789"><i class="fa color fa-phone text-primary"></i> &nbsp;+880 1234 56789</a></li>
+                                                <li class=" d-block d-md-none d-xl-none"><a href="mailto:support@yourmail.com"><i class="fa color fa-envelope text-primary"></i> &nbsp;support@yourmail.com</a></li>
+                                                    
+                                          
+                                        {{-- <li><a href="{{ route('contact') }}">Contact Us</a></li> --}}
                                         {{-- <li>
                                             <a href="#">Pages <i class="icofont-rounded-down"></i></a>
                                             <ul class="dropdown">
